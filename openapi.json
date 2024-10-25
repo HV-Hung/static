@@ -1,0 +1,1815 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "mitm-webhighlight-flows Mitmproxy2Swagger",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://web-highlights.herokuapp.com",
+      "description": "The default server"
+    }
+  ],
+  "paths": {
+    "/users/userinfo/671b1ab65e2b36c14135f9bf": {
+      "options": {
+        "summary": "OPTIONS 671b1ab65e2b36c14135f9bf",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        },
+        "parameters": [
+          {
+            "name": "invalidateCache",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "get": {
+        "summary": "GET 671b1ab65e2b36c14135f9bf",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        },
+        "parameters": [
+          {
+            "name": "invalidateCache",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/users/delete": {
+      "options": {
+        "summary": "OPTIONS users delete",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        }
+      },
+      "delete": {
+        "summary": "DELETE users delete",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "acknowledged": {
+                      "type": "number"
+                    },
+                    "deletedCount": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/register": {
+      "options": {
+        "summary": "OPTIONS register",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        }
+      },
+      "post": {
+        "summary": "POST register",
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "expiresIn": {
+                      "type": "number"
+                    },
+                    "token": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/userinfo/671b2b095e2b36c14136c77b": {
+      "options": {
+        "summary": "OPTIONS 671b2b095e2b36c14136c77b",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        },
+        "parameters": [
+          {
+            "name": "invalidateCache",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "get": {
+        "summary": "GET 671b2b095e2b36c14136c77b",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "_id": {
+                      "type": "string"
+                    },
+                    "displayName": {
+                      "type": "string"
+                    },
+                    "photoURL": {
+                      "type": "string"
+                    },
+                    "userPlan": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string"
+                        },
+                        "expiresDateMillis": {
+                          "type": "number"
+                        }
+                      }
+                    },
+                    "activeUserPlan": {
+                      "type": "string"
+                    },
+                    "premium": {
+                      "type": "number"
+                    },
+                    "strategy": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "invalidateCache",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/sync": {
+      "options": {
+        "summary": "OPTIONS sync",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        }
+      },
+      "put": {
+        "summary": "PUT sync",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "_id": {
+                        "type": "string"
+                      },
+                      "__v": {
+                        "type": "number"
+                      },
+                      "_objectStore": {
+                        "type": "string"
+                      },
+                      "_user": {
+                        "type": "string"
+                      },
+                      "backupDialogPromptInterval": {
+                        "type": "number"
+                      },
+                      "blacklistedUrls": {
+                        "type": "array",
+                        "items": {}
+                      },
+                      "chromeRatingPromptDismissed": {
+                        "type": "number"
+                      },
+                      "createdAt": {
+                        "type": "number"
+                      },
+                      "defaultHighlightColor": {
+                        "type": "string"
+                      },
+                      "dismissedBackupPromptIds": {
+                        "type": "array",
+                        "items": {}
+                      },
+                      "highlighterMode": {
+                        "type": "string"
+                      },
+                      "integrations": {
+                        "type": "array",
+                        "items": {}
+                      },
+                      "lastSync": {
+                        "type": "number"
+                      },
+                      "preferredColorMode": {
+                        "type": "string"
+                      },
+                      "recentColors": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "showBackupDialogPrompt": {
+                        "type": "number"
+                      },
+                      "showLearningTeaser": {
+                        "type": "number"
+                      },
+                      "showLeftSidebarWidget": {
+                        "type": "number"
+                      },
+                      "showMarkerPopup": {
+                        "type": "number"
+                      },
+                      "showToolboxAutomatically": {
+                        "type": "number"
+                      },
+                      "sidebarOptions": {
+                        "type": "object",
+                        "properties": {
+                          "sidebarWidth": {
+                            "type": "number"
+                          },
+                          "sidebarAlignment": {
+                            "type": "string"
+                          },
+                          "sidebarBehavior": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "updatedAt": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "entities": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "_id": {
+                          "type": "string"
+                        },
+                        "createdAt": {
+                          "type": "number"
+                        },
+                        "updatedAt": {
+                          "type": "number"
+                        },
+                        "_objectStore": {
+                          "type": "string"
+                        },
+                        "showMarkerPopup": {
+                          "type": "number"
+                        },
+                        "showLeftSidebarWidget": {
+                          "type": "number"
+                        },
+                        "showToolboxAutomatically": {
+                          "type": "number"
+                        },
+                        "defaultHighlightColor": {
+                          "type": "string"
+                        },
+                        "recentColors": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "blacklistedUrls": {
+                          "type": "array",
+                          "items": {}
+                        },
+                        "lastSync": {
+                          "type": "number"
+                        },
+                        "showLearningTeaser": {
+                          "type": "number"
+                        },
+                        "chromeRatingPromptDismissed": {
+                          "type": "number"
+                        },
+                        "sidebarOptions": {
+                          "type": "object",
+                          "properties": {
+                            "sidebarWidth": {
+                              "type": "number"
+                            },
+                            "sidebarAlignment": {
+                              "type": "string"
+                            },
+                            "sidebarBehavior": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "preferredColorMode": {
+                          "type": "string"
+                        },
+                        "showBackupDialogPrompt": {
+                          "type": "number"
+                        },
+                        "backupDialogPromptInterval": {
+                          "type": "number"
+                        },
+                        "highlighterMode": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "POST sync",
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "entities": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "_id": {
+                          "type": "string"
+                        },
+                        "createdAt": {
+                          "type": "number"
+                        },
+                        "updatedAt": {
+                          "type": "number"
+                        },
+                        "_objectStore": {
+                          "type": "string"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "tags": {
+                          "type": "array",
+                          "items": {}
+                        },
+                        "title": {
+                          "type": "string"
+                        },
+                        "origin": {
+                          "type": "string"
+                        },
+                        "language": {
+                          "type": "string"
+                        },
+                        "permission": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "isStarred": {
+                          "type": "number"
+                        },
+                        "meta": {
+                          "type": "object",
+                          "properties": {
+                            "title": {
+                              "type": "string"
+                            },
+                            "description": {
+                              "type": "string"
+                            },
+                            "image": {
+                              "type": "object",
+                              "properties": {}
+                            },
+                            "url": {
+                              "type": "string"
+                            },
+                            "favicon": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "canonicalLink": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "DELETE sync",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "acknowledged": {
+                        "type": "number"
+                      },
+                      "deletedCount": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "entities": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "_id": {
+                          "type": "string"
+                        },
+                        "_objectStore": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/marks": {
+      "options": {
+        "summary": "OPTIONS marks",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        }
+      },
+      "get": {
+        "summary": "GET marks",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bookmarks": {
+      "options": {
+        "summary": "OPTIONS bookmarks",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        }
+      },
+      "get": {
+        "summary": "GET bookmarks",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/chrome-storage": {
+      "options": {
+        "summary": "OPTIONS chrome-storage",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        }
+      },
+      "get": {
+        "summary": "GET chrome-storage",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "_id": {
+                      "type": "string"
+                    },
+                    "__v": {
+                      "type": "number"
+                    },
+                    "_objectStore": {
+                      "type": "string"
+                    },
+                    "_user": {
+                      "type": "string"
+                    },
+                    "backupDialogPromptInterval": {
+                      "type": "number"
+                    },
+                    "blacklistedUrls": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "chromeRatingPromptDismissed": {
+                      "type": "number"
+                    },
+                    "createdAt": {
+                      "type": "number"
+                    },
+                    "defaultHighlightColor": {
+                      "type": "string"
+                    },
+                    "dismissedBackupPromptIds": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "highlighterMode": {
+                      "type": "string"
+                    },
+                    "integrations": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "lastSync": {
+                      "type": "number"
+                    },
+                    "preferredColorMode": {
+                      "type": "string"
+                    },
+                    "recentColors": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "showBackupDialogPrompt": {
+                      "type": "number"
+                    },
+                    "showLearningTeaser": {
+                      "type": "number"
+                    },
+                    "showLeftSidebarWidget": {
+                      "type": "number"
+                    },
+                    "showMarkerPopup": {
+                      "type": "number"
+                    },
+                    "showToolboxAutomatically": {
+                      "type": "number"
+                    },
+                    "sidebarOptions": {
+                      "type": "object",
+                      "properties": {
+                        "sidebarWidth": {
+                          "type": "number"
+                        },
+                        "sidebarAlignment": {
+                          "type": "string"
+                        },
+                        "sidebarBehavior": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "updatedAt": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/refresh-token": {
+      "options": {
+        "summary": "OPTIONS refresh-token",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        }
+      },
+      "post": {
+        "summary": "POST refresh-token",
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "expiresIn": {
+                      "type": "number"
+                    },
+                    "token": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/product/plans": {
+      "options": {
+        "summary": "OPTIONS plans",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        }
+      },
+      "get": {
+        "summary": "GET plans",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/subscription/price/{id}": {
+      "options": {
+        "summary": "OPTIONS price by id",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "countryCode",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "get": {
+        "summary": "GET price by id",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "countryCode",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/explore/bookmarks/671b2e431a641be1e4046830": {
+      "options": {
+        "summary": "OPTIONS 671b2e431a641be1e4046830",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        }
+      },
+      "get": {
+        "summary": "GET 671b2e431a641be1e4046830",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "_id": {
+                      "type": "string"
+                    },
+                    "createdAt": {
+                      "type": "number"
+                    },
+                    "updatedAt": {
+                      "type": "number"
+                    },
+                    "_user": {
+                      "type": "string"
+                    },
+                    "isStarred": {
+                      "type": "number"
+                    },
+                    "origin": {
+                      "type": "string"
+                    },
+                    "tags": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "canonicalLink": {
+                      "type": "object"
+                    },
+                    "language": {
+                      "type": "string"
+                    },
+                    "permission": {
+                      "type": "string"
+                    },
+                    "likes": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "blocks": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "meta": {
+                      "type": "object",
+                      "properties": {
+                        "title": {
+                          "type": "string"
+                        },
+                        "description": {
+                          "type": "string"
+                        },
+                        "image": {
+                          "type": "object",
+                          "properties": {
+                            "url": {
+                              "type": "string"
+                            },
+                            "alt": {
+                              "type": "string"
+                            },
+                            "width": {
+                              "type": "string"
+                            },
+                            "height": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "favicon": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "_objectStore": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "lastSync": {
+                      "type": "number"
+                    },
+                    "modifiedAt": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/explore/bookmarks/671b2e431a641be1e4046830/marks": {
+      "options": {
+        "summary": "OPTIONS marks",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        }
+      },
+      "get": {
+        "summary": "GET marks",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "_id": {
+                        "type": "string"
+                      },
+                      "createdAt": {
+                        "type": "number"
+                      },
+                      "updatedAt": {
+                        "type": "number"
+                      },
+                      "_objectStore": {
+                        "type": "string"
+                      },
+                      "_user": {
+                        "type": "string"
+                      },
+                      "_bookmark": {
+                        "type": "string"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "text": {
+                        "type": "string"
+                      },
+                      "tags": {
+                        "type": "array",
+                        "items": {}
+                      },
+                      "completeText": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "highlightSource": {
+                        "type": "object",
+                        "properties": {
+                          "startMeta": {
+                            "type": "object",
+                            "properties": {
+                              "parentTagName": {
+                                "type": "string"
+                              },
+                              "parentIndex": {
+                                "type": "number"
+                              },
+                              "textOffset": {
+                                "type": "number"
+                              }
+                            }
+                          },
+                          "endMeta": {
+                            "type": "object",
+                            "properties": {
+                              "parentTagName": {
+                                "type": "string"
+                              },
+                              "parentIndex": {
+                                "type": "number"
+                              },
+                              "textOffset": {
+                                "type": "number"
+                              }
+                            }
+                          },
+                          "text": {
+                            "type": "string"
+                          },
+                          "id": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "color": {
+                        "type": "string"
+                      },
+                      "type": {
+                        "type": "string"
+                      },
+                      "domElementOffsetTop": {
+                        "type": "number"
+                      },
+                      "domElementOffsetLeft": {
+                        "type": "number"
+                      },
+                      "mediaType": {
+                        "type": "string"
+                      },
+                      "lastSync": {
+                        "type": "number"
+                      },
+                      "modifiedAt": {
+                        "type": "number"
+                      },
+                      "richText": {
+                        "type": "object"
+                      },
+                      "notes": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/backup/import": {
+      "options": {
+        "summary": "OPTIONS import",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        }
+      },
+      "post": {
+        "summary": "POST import",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "marks": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "_id": {
+                          "type": "string"
+                        },
+                        "createdAt": {
+                          "type": "number"
+                        },
+                        "updatedAt": {
+                          "type": "number"
+                        },
+                        "_objectStore": {
+                          "type": "string"
+                        },
+                        "_user": {
+                          "type": "string"
+                        },
+                        "_bookmark": {
+                          "type": "string"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "text": {
+                          "type": "string"
+                        },
+                        "tags": {
+                          "type": "array",
+                          "items": {}
+                        },
+                        "highlightSource": {
+                          "type": "object",
+                          "properties": {
+                            "startMeta": {
+                              "type": "object",
+                              "properties": {
+                                "parentTagName": {
+                                  "type": "string"
+                                },
+                                "parentIndex": {
+                                  "type": "number"
+                                },
+                                "textOffset": {
+                                  "type": "number"
+                                }
+                              }
+                            },
+                            "endMeta": {
+                              "type": "object",
+                              "properties": {
+                                "parentTagName": {
+                                  "type": "string"
+                                },
+                                "parentIndex": {
+                                  "type": "number"
+                                },
+                                "textOffset": {
+                                  "type": "number"
+                                }
+                              }
+                            },
+                            "text": {
+                              "type": "string"
+                            },
+                            "id": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "color": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "domElementOffsetTop": {
+                          "type": "number"
+                        },
+                        "domElementOffsetLeft": {
+                          "type": "number"
+                        },
+                        "mediaType": {
+                          "type": "string"
+                        },
+                        "lastSync": {
+                          "type": "number"
+                        },
+                        "modifiedAt": {
+                          "type": "number"
+                        },
+                        "richText": {
+                          "type": "object"
+                        },
+                        "notes": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "bookmarks": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "_id": {
+                          "type": "string"
+                        },
+                        "createdAt": {
+                          "type": "number"
+                        },
+                        "updatedAt": {
+                          "type": "number"
+                        },
+                        "_user": {
+                          "type": "string"
+                        },
+                        "isStarred": {
+                          "type": "number"
+                        },
+                        "origin": {
+                          "type": "string"
+                        },
+                        "tags": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "title": {
+                          "type": "string"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "canonicalLink": {
+                          "type": "object"
+                        },
+                        "language": {
+                          "type": "string"
+                        },
+                        "permission": {
+                          "type": "string"
+                        },
+                        "likes": {
+                          "type": "array",
+                          "items": {}
+                        },
+                        "blocks": {
+                          "type": "array",
+                          "items": {}
+                        },
+                        "meta": {
+                          "type": "object",
+                          "properties": {
+                            "title": {
+                              "type": "string"
+                            },
+                            "description": {
+                              "type": "string"
+                            },
+                            "image": {
+                              "type": "object",
+                              "properties": {
+                                "url": {
+                                  "type": "string"
+                                },
+                                "alt": {
+                                  "type": "string"
+                                },
+                                "width": {
+                                  "type": "string"
+                                },
+                                "height": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "url": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "type": "string"
+                            },
+                            "favicon": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "_objectStore": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "lastSync": {
+                          "type": "number"
+                        },
+                        "modifiedAt": {
+                          "type": "number"
+                        },
+                        "openedAt": {
+                          "type": "number"
+                        }
+                      }
+                    }
+                  },
+                  "chromeSettings": {
+                    "type": "object",
+                    "properties": {
+                      "_id": {
+                        "type": "string"
+                      },
+                      "__v": {
+                        "type": "number"
+                      },
+                      "_objectStore": {
+                        "type": "string"
+                      },
+                      "_user": {
+                        "type": "string"
+                      },
+                      "backupDialogPromptInterval": {
+                        "type": "number"
+                      },
+                      "blacklistedUrls": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "chromeRatingPromptDismissed": {
+                        "type": "number"
+                      },
+                      "createdAt": {
+                        "type": "number"
+                      },
+                      "defaultHighlightColor": {
+                        "type": "string"
+                      },
+                      "dismissedBackupPromptIds": {
+                        "type": "array",
+                        "items": {}
+                      },
+                      "highlighterMode": {
+                        "type": "string"
+                      },
+                      "integrations": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string"
+                            },
+                            "pageId": {
+                              "type": "object"
+                            },
+                            "databaseId": {
+                              "type": "object"
+                            }
+                          }
+                        }
+                      },
+                      "lastSync": {
+                        "type": "number"
+                      },
+                      "preferredColorMode": {
+                        "type": "string"
+                      },
+                      "recentColors": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "showBackupDialogPrompt": {
+                        "type": "number"
+                      },
+                      "showLearningTeaser": {
+                        "type": "number"
+                      },
+                      "showLeftSidebarWidget": {
+                        "type": "number"
+                      },
+                      "showMarkerPopup": {
+                        "type": "number"
+                      },
+                      "showToolboxAutomatically": {
+                        "type": "number"
+                      },
+                      "sidebarOptions": {
+                        "type": "object",
+                        "properties": {
+                          "sidebarWidth": {
+                            "type": "number"
+                          },
+                          "sidebarAlignment": {
+                            "type": "string"
+                          },
+                          "sidebarBehavior": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "updatedAt": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/meta/https%3A%2F%2Fgithub.com%2Fhmkcode%2FAndroid": {
+      "options": {
+        "summary": "OPTIONS https%3a%2f%2fgithub.com%2fhmkcode%2fandroid",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        }
+      },
+      "get": {
+        "summary": "GET https%3a%2f%2fgithub.com%2fhmkcode%2fandroid",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "image": {
+                      "type": "object",
+                      "properties": {
+                        "url": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "object"
+                        },
+                        "height": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "string"
+                        },
+                        "alt": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "favicon": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth": {
+      "options": {
+        "summary": "OPTIONS auth",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        }
+      },
+      "post": {
+        "summary": "POST auth",
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "expiresIn": {
+                      "type": "number"
+                    },
+                    "token": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "isBusinessError": {
+                      "type": "number"
+                    },
+                    "status": {
+                      "type": "number"
+                    },
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/reset-password": {
+      "options": {
+        "summary": "OPTIONS reset-password",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        },
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "post": {
+        "summary": "POST reset-password",
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "envelope": {
+                      "type": "object",
+                      "properties": {
+                        "from": {
+                          "type": "string"
+                        },
+                        "to": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "messageId": {
+                      "type": "string"
+                    },
+                    "response": {
+                      "type": "string"
+                    },
+                    "raw": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string"
+                        },
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "type": "number"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/password-reset": {
+      "options": {
+        "summary": "OPTIONS password-reset",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        },
+        "parameters": [
+          {
+            "name": "token",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "post": {
+        "summary": "POST password-reset",
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "isBusinessError": {
+                      "type": "number"
+                    },
+                    "status": {
+                      "type": "number"
+                    },
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "token",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "password": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/change-password": {
+      "options": {
+        "summary": "OPTIONS change-password",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        }
+      },
+      "post": {
+        "summary": "POST change-password",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "isBusinessError": {
+                      "type": "number"
+                    },
+                    "status": {
+                      "type": "number"
+                    },
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "newPassword": {
+                    "type": "string"
+                  },
+                  "oldPassword": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "x-path-templates": [
+    "/subscription/price/840816",
+    "/subscription/price/840817",
+    "/subscription/price/840818",
+    "/subscription/price/840819",
+    "/subscription/price/881989",
+    "/subscription/price/881993"
+  ]
+}
